@@ -18,7 +18,7 @@ The library is built entirely from scratch using **vanilla JavaScript and CSS**,
 
 It provides  clean, reponsive design and a simple API for integrating stylish alert dialogs into any web project.
 
-<!-----
+---
 
 ## 🌐 Preview
 
@@ -28,7 +28,7 @@ It provides  clean, reponsive design and a simple API for integrating stylish al
 
 🔗 Live Demo: https://danislw.github.io/Custom-Alerts/
 
-*You can test the library directly through GitHub Pages.*-->
+*You can test the library directly through GitHub Pages.*
 
 ---
 
