@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Custom Alerts Demo</title>
+
+    <link rel="stylesheet" href="src/alerts.css" />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #1f2937;
+            color: #f9fafb;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        header h1 {
+            font-size: 2.75rem;
+            font-weight: 900;
+            color: #ebebeb;
+            margin-bottom: 0.25rem;
+        }
+        header p {
+            font-size: 1.1rem;
+            color: #9ca3af;
+        }
+
+        .alert-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            max-width: 700px;
+            width: 100%;
+        }
+
+        .alert-card {
+            background: #374151;
+            border-radius: 12px;
+            padding: 1.25rem 1rem 1.5rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        .alert-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 14px 30px rgba(0, 0, 0, 0.6);
+        }
+
+        .alert-card button {
+            all: unset;
+            cursor: pointer;
+            background-color: var(--btn-bg);
+            color: var(--btn-color);
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 0.65rem 1.4rem;
+            border-radius: 9999px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            user-select: none;
+            transition: background-color 0.25s ease, box-shadow 0.25s ease;
+            width: 100%;
+            text-align: center;
+        }
+        .alert-card button:hover {
+            background-color: var(--btn-hover);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        .alert-desc {
+            margin-top: 0.8rem;
+            font-size: 0.9rem;
+            color: #d1d5db;
+            text-align: center;
+            user-select: none;
+        }
+
+        .success {
+            --btn-bg: #16C60C;
+            --btn-hover: #16a34a;
+            --btn-color: white;
+        }
+        .danger {
+            --btn-bg: #E81224;
+            --btn-hover: #b91c1c;
+            --btn-color: white;
+        }
+        .warning {
+            --btn-bg: #FFF100;
+            --btn-hover: #ca8a04;
+            --btn-color: #1f2937;
+        }
+        .info {
+            --btn-bg: #0077D6;
+            --btn-hover: #2563eb;
+            --btn-color: white;
+        }
+
+        footer {
+            margin-top: auto;
+            font-size: 0.8rem;
+            color: #6b7280;
+            padding: 1rem;
+            text-align: center;
+        }
+        footer a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        footer a i {
+            font-size: 16px;
+        }
+
+        @media (max-width: 480px) {
+            .alert-buttons {
+            grid-template-columns: 1fr;
+            max-width: 320px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Custom Alerts</h1>
+        <p>Modern, customizable JavaScript alert modals — built with vanilla JS & CSS</p>
+    </header>
+
+    <section class="alert-buttons">
+        <div class="alert-card">
+            <button class="success" onclick="showAlert('Successfully executed', 'success')">Success Alert</button>
+            <div class="alert-desc">Green alert for successful operations.</div>
+        </div>
+
+        <div class="alert-card">
+            <button class="danger" onclick="showAlert('An error occurred', 'danger')">Danger Alert</button>
+            <div class="alert-desc">Red alert for errors or critical issues.</div>
+        </div>
+
+        <div class="alert-card">
+            <button class="warning" onclick="showAlert('Something might be wrong', 'warning')">Warning Alert</button>
+            <div class="alert-desc">Yellow alert for warnings or cautions.</div>
+        </div>
+
+        <div class="alert-card">
+            <button class="info" onclick="showAlert('Information message', 'info')">Info Alert</button>
+            <div class="alert-desc">Blue alert for general information.</div>
+        </div>
+    </section>
+
+    <div id="custom-alert-container"></div>
+
+    <footer>
+        Created by <strong>Datcu Daniel-Alexandru</strong> &nbsp;|&nbsp; 
+        <a href="https://github.com/DaniSLW/Custom-Alerts" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+    </footer>
+
+<script src="src/alerts.js"></script>
+<script src="https://kit.fontawesome.com/7e78455728.js" crossorigin="anonymous"></script>
+</body>
+</html>
