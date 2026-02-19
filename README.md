@@ -39,11 +39,17 @@ The project is organized as follows:
 ```
 Custom-Alerts/
 │
-├── alerts.js        # Core JavaScript logic
-├── alerts.css       # Styling for alert modals
-├── index.html       # Demo page
-├── README.md
-└── LICENSE
+├── assets/
+│   ├── error.png
+│   ├── info.png
+│   ├── success.png
+│   └── warning.png
+│
+├── src/
+│   ├── alerts.css
+│   └── alerts.js
+│
+└── index.html
 ```
 
 
@@ -80,7 +86,8 @@ This project was developed using:
 ## 🚀 Basic Usage Example
 
 ```
-showAlert('An error occurred', 'danger');
+showAlert('An error occurred', 'danger'); // Default time until alert hide = 4 seconds
+showAlert('An error occurred', 'danger', 10000); // Time until alert hide = 10 seconds
 ```
 
 ---
