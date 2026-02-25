@@ -6,10 +6,10 @@ function showAlert(message, type = "success", duration = 4000) {
     alert.className = "custom-alert " + type;
 
     const icons = {
-        success: "../assets/success.png",
-        danger: "../assets/error.png",
-        warning: "../assets/warning.png",
-        info: "../assets/info.png"
+        success: "assets/success.png",
+        danger: "assets/error.png",
+        warning: "assets/warning.png",
+        info: "assets/info.png"
     };
 
     alert.innerHTML = `
