@@ -5,11 +5,11 @@ function showAlert(message, type = "success", duration = 4000) {
     const alert = document.createElement("div");
     alert.className = "custom-alert " + type;
 
-    cost icons = {
+    const icons = {
         success: "https://danislw.github.io/Custom-Alerts/assets/success.png",
         danger: "https://danislw.github.io/Custom-Alerts/assets/danger.png",
         warning: "https://danislw.github.io/Custom-Alerts/assets/warning.png",
-        info="https://danislw.github.io/Custom-Alerts/assets/info.png"
+        info: "https://danislw.github.io/Custom-Alerts/assets/info.png"
     };
 
     alert.innerHTML = `
