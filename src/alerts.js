@@ -6,10 +6,10 @@ function showAlert(message, type = "success", duration = 4000) {
     alert.className = "custom-alert " + type;
 
     const icons = {
-        success: "https://danislw.github.io/Custom-Alerts/assets/success.png",
-        danger: "https://danislw.github.io/Custom-Alerts/assets/error.png",
-        warning: "https://danislw.github.io/Custom-Alerts/assets/warning.png",
-        info: "https://danislw.github.io/Custom-Alerts/assets/info.png"
+        success: "../assets/success.png",
+        danger: "../assets/error.png",
+        warning: "../assets/warning.png",
+        info: "../assets/info.png"
     };
 
     alert.innerHTML = `
