@@ -7,7 +7,7 @@ function showAlert(message, type = "success", duration = 4000) {
 
     const icons = {
         success: "https://danislw.github.io/Custom-Alerts/assets/success.png",
-        danger: "https://danislw.github.io/Custom-Alerts/assets/danger.png",
+        danger: "https://danislw.github.io/Custom-Alerts/assets/error.png",
         warning: "https://danislw.github.io/Custom-Alerts/assets/warning.png",
         info: "https://danislw.github.io/Custom-Alerts/assets/info.png"
     };
