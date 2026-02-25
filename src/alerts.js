@@ -1,4 +1,4 @@
-export function showAlert(message, type = "success", duration = 4000) {
+function showAlert(message, type = "success", duration = 4000) {
     const container = document.getElementById("custom-alert-container");
     if (!container) return;
 
@@ -60,14 +60,17 @@ document.addEventListener("DOMContentLoaded", () => {
         .addEventListener('click', () => {
             showAlert('Successfully executed', 'success');
         });
+
     document.getElementById('error-alert')
         .addEventListener('click', () => {
             showAlert('An error occurred', 'danger');
         });
+
     document.getElementById('warning-alert')
         .addEventListener('click', () => {
             showAlert('Something might be wrong', 'warning');
         });
+
     document.getElementById('info-alert')
         .addEventListener('click', () => {
             showAlert('Information message', 'info');
