@@ -54,3 +54,22 @@ export function showAlert(message, type = "success", duration = 4000) {
         }, 500);
     };
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById('success-alert')
+        .addEventListener('click', () => {
+            showAlert('Successfully executed', 'success');
+        });
+    document.getElementById('error-alert')
+        .addEventListener('click', () => {
+            showAlert('An error occurred', 'danger');
+        });
+    document.getElementById('warning-alert')
+        .addEventListener('click', () => {
+            showAlert('Something might be wrong', 'warning');
+        });
+    document.getElementById('info-alert')
+        .addEventListener('click', () => {
+            showAlert('Information message', 'info');
+        });
+});
