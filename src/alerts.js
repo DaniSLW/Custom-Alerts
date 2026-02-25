@@ -1,4 +1,4 @@
-function showAlert(message, type = "success", duration = 4000) {
+export function showAlert(message, type = "success", duration = 4000) {
     const container = document.getElementById("custom-alert-container");
     if (!container) return;
 
